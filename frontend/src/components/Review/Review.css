@@ -1,0 +1,76 @@
+/* Base styling */
+.review-menu {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.review-menu h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.review-content {
+  padding: 20px;
+  font-size: 1.25rem;
+  color: #495057;
+}
+
+.review-content p {
+  margin: 10px 0;
+}
+
+.review-content .rating {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+/* Arrow buttons */
+.arrow-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.arrow-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.arrow-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .review-menu h1 {
+    font-size: 2rem;
+  }
+
+  .review-content {
+    font-size: 1rem;
+  }
+
+  .arrow-button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

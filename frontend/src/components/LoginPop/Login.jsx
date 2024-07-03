@@ -5,7 +5,7 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 
 const Login = ({ setShowLogin }) => {
-  const { url, setToken, setUser } = useContext(StoreContext);
+  const { url, setToken,user, setUser } = useContext(StoreContext);
 
   const [currState, setCurrState] = useState("Login");
   const [data, setData] = useState({
@@ -29,11 +29,11 @@ const Login = ({ setShowLogin }) => {
     } else {
       newUrl += "/api/v1/user/register";
     }
-    const requestData = currState === "Login"
-      ? { emailOrPhone: data.emailOrPhone, password: data.password }
-      : { name: data.name, email: data.emailOrPhone, password: data.password, phone: data.phone };
+    // const requestData = currState === "Login"
+    //   ? { emailOrPhone: data.email, password: data.password }
+    //   : { name: data.name, email: data.email, password: data.password };
       
-    const response = await axios.post(newUrl, requestData);
+    const response = await axios.post(newUrl, data);
     if (response.data.success) {
       setToken(response.data.token);
       setUser(response.data.user);
@@ -58,14 +58,15 @@ const Login = ({ setShowLogin }) => {
         </div>
         <div className="login-popup-inputs">
           {currState === "Login" ? (
-            <input
-              name="emailOrPhone"
-              onChange={onChangeHandler}
-              value={data.emailOrPhone}
-              type="text"
-              placeholder="Email or Phone Number"
-              required
-            />
+            <></>
+            // <input
+            //   name="email"
+            //   onChange={onChangeHandler}
+            //   value={data.email}
+            //   type="text"
+            //   placeholder="Email "
+            //   required
+            // />
           ) : (
             <>
               <input
@@ -76,17 +77,18 @@ const Login = ({ setShowLogin }) => {
                 placeholder="Your Name"
                 required
               />
+          
+            
+            </>
+          )}
               <input
-                name="emailOrPhone"
+                name="email"
                 onChange={onChangeHandler}
-                value={data.emailOrPhone}
+                value={data.email}
                 type="email"
                 placeholder="Email"
                 required
               />
-            
-            </>
-          )}
           <input
             name="password"
             onChange={onChangeHandler}

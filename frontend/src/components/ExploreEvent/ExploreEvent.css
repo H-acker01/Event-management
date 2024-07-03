@@ -7,23 +7,23 @@
 .explore-menu h1 {
     color: #262626;
     font-weight: 500;
-    font-size: 24px; /* Adjust font size for h1 */
+    font-size: 24px; 
 }
 
 .explore-menu-text {
-    max-width: 100%; /* Adjust max-width */
+    max-width: 100%; 
     color: #808080;
-    font-size: 16px; /* Adjust font size for text */
+    font-size: 16px;
 }
 
 .explore-menu-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Adjust gap */
+    gap: 20px; 
     text-align: center;
     margin: 20px 0px;
-    overflow-x: auto; /* Change to auto for better responsiveness */
+    overflow-x: auto; 
 }
 
 .explore-menu-list::-webkit-scrollbar {
@@ -31,8 +31,8 @@
 }
 
 .explore-menu-list-item img {
-    width: 80px; /* Adjust width */
-    height: 80px; /* Adjust height */
+    width: 80px; 
+    height: 80px;
     cursor: pointer;
     border-radius: 50%;
     transition: 0.2s;
@@ -41,7 +41,7 @@
 .explore-menu-list-item p {
     margin-top: 10px;
     color: #747474;
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; 
     cursor: pointer;
 }
 
@@ -60,44 +60,44 @@
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .explore-menu h1 {
-        font-size: 22px; /* Adjust font size for smaller screens */
-    }
+        font-size: 22px; 
+        }
 
     .explore-menu-text {
-        max-width: 80%; /* Adjust max-width for smaller screens */
-        font-size: 14px; /* Adjust font size for smaller screens */
+        max-width: 80%; 
+        font-size: 14px;
     }
 
     .explore-menu-list {
-        gap: 10px; /* Adjust gap for smaller screens */
+        gap: 10px; 
     }
 
     .explore-menu-list-item img {
-        width: 60px; /* Adjust width for smaller screens */
-        height: 60px; /* Adjust height for smaller screens */
+        width: 60px;  
+        height: 60px; 
     }
 
     .explore-menu-list-item p {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px; 
     }
 }
 
 @media screen and (max-width: 576px) {
     .explore-menu h1 {
-        font-size: 20px; /* Further decrease font size for smaller screens */
+        font-size: 20px;
     }
 
     .explore-menu-text {
-        max-width: 100%; /* Adjust max-width for smaller screens */
-        font-size: 12px; /* Further decrease font size for smaller screens */
+        max-width: 100%; 
+        font-size: 12px;
     }
 
     .explore-menu-list-item img {
-        width: 50px; /* Further decrease width for smaller screens */
-        height: 50px; /* Further decrease height for smaller screens */
+        width: 50px;  
+        height: 50px; 
     }
 
     .explore-menu-list-item p {
-        font-size: 12px; /* Further decrease font size for smaller screens */
+        font-size: 12px;
     }
 }
